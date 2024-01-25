@@ -104,7 +104,7 @@ public class AuctionsController : ControllerBase
     {
         var auction = await _context.Auctions.FindAsync(id);
 
-        if (auction is not null) return NotFound();
+        if (auction is null) return NotFound();
 
         if (auction.Seller != User.Identity.Name) return Forbid();
 
