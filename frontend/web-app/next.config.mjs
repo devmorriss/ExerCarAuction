@@ -18,7 +18,8 @@ const nextConfig = {
         fetches: {
             fullUrl: true
         }
-    }
+    },
+    output: 'standalone'
 };
 
 export default nextConfig;
